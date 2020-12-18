@@ -48,7 +48,7 @@ class BayesianRegression(Regression):
         self.w_mean = w_mean
         self.w_precision = w_precision
         self.w_cov = np.linalg.inv(self.w_precision)
-
+        
     def predict(self, X:np.ndarray, return_std:bool=False, sample_size:int=None):
         """
         return mean (and standard deviation) of predictive distribution
